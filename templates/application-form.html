@@ -3,15 +3,28 @@
 {% block title %}Application Form{% endblock %}
 
 {% block content %}
-    <form action="/application">
-        First name: 
-        <input type="text" name="firstname"><br>
-        Last name:
-        <input type="text" name="lastname"><br>
-        Salary:
-        <input type="text" name="salary"><br>
-        Job title:
-        <input type="text" name="jobtitle"><br>
+    <h1>Job Application</h1>
+
+    <p class="instructions">Please fill out the application and submit when completed.</p>
+
+    <form action="/application" method="POST">
+        <label for="firstname">First Name: </label>
+        <input id="firstname" type="text" name="field-firstname"><br>
+        
+        <label for="lastname">Last Name: </label>
+        <input id="lastname" type="text" name="field-lastname"><br>
+        
+        <label for="salary">Salary Requirement: </label>
+        <input id="salary" type="text" name="field-salary"><br>
+        
+        <label for="job-title">Please select the job you are applying for: 
+        </label>
+        <select id="job-title" name="select-job">
+            <option value="Software Engieer">Software Engineer</option>
+            <option value="QA Engineer">QA Engineer</option>
+            <option value="Product Manager">Product Manager</option>
+        </select><br>
+        
         <input type="submit">
     </form>
 {% endblock %}

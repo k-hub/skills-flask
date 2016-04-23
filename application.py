@@ -17,14 +17,14 @@ def application_form():
     return render_template("application-form.html")
 
 
-@app.route("/application")
+@app.route("/application", methods=["POST"])
 def response():
     """Return a response to acknowledge submitted form."""
 
-    first_name = request.args.get("firstname")
-    last_name = request.args.get("lastname")
-    salary = request.args.get("salary")
-    job_title = request.args.get("jobtitle")
+    first_name = request.form.get("field-firstname")
+    last_name = request.form.get("field-lastname")
+    salary = request.form.get("field-salary")
+    job_title = request.form.get("select-job")
 
     return render_template("application-response.html",
                             firstname=first_name,
