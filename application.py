@@ -7,10 +7,6 @@ app = Flask(__name__)
 def index_page():
     """Show an index page."""
 
-
-    # Alternately, we could make this a Jinja template in `templates/`
-    # and return that result of rendering this, like:
-    #
     return render_template("index.html")
 
 
@@ -35,8 +31,6 @@ def response():
                             lastname=last_name,
                             salary=salary,
                             jobtitle=job_title)
-
-
 
 
 if __name__ == "__main__":

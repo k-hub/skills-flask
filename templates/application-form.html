@@ -1,13 +1,9 @@
-<!doctype html>
-<html>
-<head>
-    <title>Skills-Web</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Application Form{% endblock %}
+
+{% block content %}
     <form action="/application">
-<!-- This page needs a form that can capture data about the user's
-first name, last name, job title, and salary requirements. -->
         First name: 
         <input type="text" name="firstname"><br>
         Last name:
@@ -18,5 +14,4 @@ first name, last name, job title, and salary requirements. -->
         <input type="text" name="jobtitle"><br>
         <input type="submit">
     </form>
-</body>
-</html>
+{% endblock %}

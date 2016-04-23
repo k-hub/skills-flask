@@ -1,10 +1,7 @@
-<!doctype html>
-<html>
-<head>
-    <title>Application Response</title>
-</head>
-<body>
-    Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ jobtitle }}. Your minimum salary requirement is {{ salary }} dollars.
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}Application Response{% endblock %}
+
+{% block content %}
+    Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ jobtitle }}. Your minimum salary requirement is {{ salary }} dollars.
+{% endblock %}
